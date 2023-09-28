@@ -91,7 +91,7 @@ public class DonHangApi {
 	}
 
 	// xác nhận hoàn thành đơn hàng
-	@PostMapping("/cancel")
+	@PostMapping("/cancel")//Tuantest2
 	public void huyDonHangAdmin(@RequestParam("donHangId") long donHangId) {
 		DonHang dh = donHangService.findById(donHangId);
 		dh.setTrangThaiDonHang("Đã bị hủy");
@@ -99,7 +99,6 @@ public class DonHangApi {
 	}
 
 	// lấy dữ liệu làm báo cáo thống kê
-	//Tuantest
 	@GetMapping("/report")
 	public List<Object> test() {
 		return donHangService.layDonHangTheoThangVaNam();
