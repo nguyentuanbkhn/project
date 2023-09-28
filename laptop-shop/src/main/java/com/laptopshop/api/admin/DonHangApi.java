@@ -91,7 +91,7 @@ public class DonHangApi {
 	}
 
 	// xác nhận hoàn thành đơn hàng
-	@PostMapping("/cancel")//Tuantest2
+	@PostMapping("/cancel")
 	public void huyDonHangAdmin(@RequestParam("donHangId") long donHangId) {
 		DonHang dh = donHangService.findById(donHangId);
 		dh.setTrangThaiDonHang("Đã bị hủy");
