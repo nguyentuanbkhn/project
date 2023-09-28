@@ -100,6 +100,7 @@ public class DonHangApi {
 
 	// lấy dữ liệu làm báo cáo thống kê
 	@GetMapping("/report")
+	//Test master
 	public List<Object> test() {
 		return donHangService.layDonHangTheoThangVaNam();
 	}
