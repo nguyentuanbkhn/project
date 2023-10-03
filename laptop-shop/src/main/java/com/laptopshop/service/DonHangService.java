@@ -29,4 +29,13 @@ public interface DonHangService {
 	List<DonHang> getDonHangByNguoiDung(NguoiDung currentUser);
 	
 	int countByTrangThaiDonHang(String trangThaiDonHang);
+	
+	//TuanNV
+	public String getDiachiService();
+	
+	//TuanNV Test HQL
+	public String getVaiTroService(Long idcantimService);
+	
+	//TuanNV Test HQL tim mã vai trò
+	public String getMaVaiTroService(Long idnguoidung);	
 }

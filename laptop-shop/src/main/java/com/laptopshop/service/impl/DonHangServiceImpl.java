@@ -127,5 +127,26 @@ public class DonHangServiceImpl implements DonHangService {
 	public int countByTrangThaiDonHang(String trangThaiDonHang) {
 		return donHangRepo.countByTrangThaiDonHang(trangThaiDonHang);
 	}
+	
+	//TuanNV
+	@Override
+	public String getDiachiService() {
+		String ketqua = donHangRepo.getDiachiRepo();
+		return ketqua;
+	}
+	
+	//TuanNV Test HQL
+	@Override
+	public String getVaiTroService(Long idcantimService) {
+		String ketqua = donHangRepo.getTenVaiTroRepo(idcantimService);
+		return ketqua;
+	}
+	
+	//TuanNV Test HQL tìm mã người dùng
+	@Override
+	public String getMaVaiTroService(Long idnguoidung) {
+		String mavaitro = donHangRepo.getMaVaiTroRepo(idnguoidung);
+		return mavaitro;
+	}	
 
 }

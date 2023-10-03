@@ -103,4 +103,28 @@ public class DonHangApi {
 	public List<Object> test() {
 		return donHangService.layDonHangTheoThangVaNam();
 	}
+	
+	//TuanNV: Test SQL Native
+	@GetMapping("/testSQL")
+	public String getDiachitest() {
+		String ketqua = donHangService.getDiachiService();
+		System.out.println(ketqua);
+		return ketqua;
+	}
+	
+	//TuanNV: Test HQL
+	@GetMapping("/testHQL")
+	public String getVaiTroAPI(@RequestParam("id") Long idcantimAPI) {
+		String ketqua = donHangService.getVaiTroService(idcantimAPI);
+		System.out.println(ketqua);
+		return ketqua;
+	}
+	
+	//TuanNV: Test native SQL tìm mã vai trò
+	@GetMapping("/testHQL_mavaitro")
+	public String getMaVaiTroAPI(@RequestParam("idnguoidung") Long idnguoidung) {
+		String mavaitro = donHangService.getMaVaiTroService(idnguoidung);
+		System.out.println(mavaitro);
+		return mavaitro;
+	}
 }
