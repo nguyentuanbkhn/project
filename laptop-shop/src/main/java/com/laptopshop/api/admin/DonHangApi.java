@@ -124,7 +124,8 @@ public class DonHangApi {
 	@GetMapping("/testHQL_mavaitro")
 	public String getMaVaiTroAPI(@RequestParam("idnguoidung") Long idnguoidung) {
 		String mavaitro = donHangService.getMaVaiTroService(idnguoidung);
-		System.out.println(mavaitro);
+		System.out.println(xxx);
+		//pushxx
 		return mavaitro;
 	}
 }
