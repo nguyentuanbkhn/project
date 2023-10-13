@@ -125,6 +125,6 @@ public class DonHangApi {
 	public String getMaVaiTroAPI(@RequestParam("idnguoidung") Long idnguoidung) {
 		String mavaitro = donHangService.getMaVaiTroService(idnguoidung);
 		System.out.println(mavaitro);
-		return mavaitro;
+		return mavaitro;//CM2
 	}
 }
